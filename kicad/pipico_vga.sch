@@ -275,28 +275,15 @@ F 3 "" H 3250 2150 50  0001 C CNN
 $EndComp
 Connection ~ 9400 5000
 Wire Wire Line
-	9400 5100 9400 5000
-$Comp
-L power:GND #PWR0101
-U 1 1 602AB62B
-P 9400 5100
-F 0 "#PWR0101" H 9400 4850 50  0001 C CNN
-F 1 "GND" H 9405 4927 50  0000 C CNN
-F 2 "" H 9400 5100 50  0001 C CNN
-F 3 "" H 9400 5100 50  0001 C CNN
-	1    9400 5100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	9400 4800 9400 5000
 Connection ~ 9400 4800
 Wire Wire Line
 	9400 4600 9400 4800
 $Comp
-L Connector:TestPoint TP6
+L Connector:TestPoint GND3
 U 1 1 602A27FA
 P 9400 5000
-F 0 "TP6" V 9354 5188 50  0000 L CNN
+F 0 "GND3" V 9354 5188 50  0000 L CNN
 F 1 "TestPoint" V 9445 5188 50  0000 L CNN
 F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 5000 50  0001 C CNN
 F 3 "~" H 9600 5000 50  0001 C CNN
@@ -304,10 +291,10 @@ F 3 "~" H 9600 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:TestPoint TP5
+L Connector:TestPoint GND2
 U 1 1 602A27F4
 P 9400 4800
-F 0 "TP5" V 9354 4988 50  0000 L CNN
+F 0 "GND2" V 9354 4988 50  0000 L CNN
 F 1 "TestPoint" V 9445 4988 50  0000 L CNN
 F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 4800 50  0001 C CNN
 F 3 "~" H 9600 4800 50  0001 C CNN
@@ -315,10 +302,10 @@ F 3 "~" H 9600 4800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:TestPoint TP4
+L Connector:TestPoint GND1
 U 1 1 602A27EE
 P 9400 4600
-F 0 "TP4" V 9354 4788 50  0000 L CNN
+F 0 "GND1" V 9354 4788 50  0000 L CNN
 F 1 "TestPoint" V 9445 4788 50  0000 L CNN
 F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 4600 50  0001 C CNN
 F 3 "~" H 9600 4600 50  0001 C CNN
@@ -326,10 +313,10 @@ F 3 "~" H 9600 4600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:TestPoint TP3
+L Connector:TestPoint BLUE1
 U 1 1 6027BD8F
 P 9400 4300
-F 0 "TP3" V 9354 4488 50  0000 L CNN
+F 0 "BLUE1" V 9354 4488 50  0000 L CNN
 F 1 "TestPoint" V 9445 4488 50  0000 L CNN
 F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 4300 50  0001 C CNN
 F 3 "~" H 9600 4300 50  0001 C CNN
@@ -337,10 +324,10 @@ F 3 "~" H 9600 4300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:TestPoint TP2
+L Connector:TestPoint GREEN1
 U 1 1 6027B902
 P 9400 4100
-F 0 "TP2" V 9354 4288 50  0000 L CNN
+F 0 "GREEN1" V 9354 4288 50  0000 L CNN
 F 1 "TestPoint" V 9445 4288 50  0000 L CNN
 F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 4100 50  0001 C CNN
 F 3 "~" H 9600 4100 50  0001 C CNN
@@ -348,10 +335,10 @@ F 3 "~" H 9600 4100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:TestPoint TP1
+L Connector:TestPoint RED1
 U 1 1 6027B3D3
 P 9400 3900
-F 0 "TP1" V 9354 4088 50  0000 L CNN
+F 0 "RED1" V 9354 4088 50  0000 L CNN
 F 1 "TestPoint" V 9445 4088 50  0000 L CNN
 F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 3900 50  0001 C CNN
 F 3 "~" H 9600 3900 50  0001 C CNN
@@ -1129,4 +1116,31 @@ Text Label 5700 3050 0    50   ~ 0
 b3
 Text Label 5700 2950 0    50   ~ 0
 b4
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 605442D5
+P 9500 5200
+F 0 "H1" V 9600 5150 50  0000 L CNN
+F 1 "MountingHole_Pad" V 9600 5250 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 9500 5200 50  0001 C CNN
+F 3 "~" H 9500 5200 50  0001 C CNN
+	1    9500 5200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9400 5000 9400 5200
+$Comp
+L power:GND #PWR0101
+U 1 1 605791B2
+P 9400 5300
+F 0 "#PWR0101" H 9400 5050 50  0001 C CNN
+F 1 "GND" H 9405 5127 50  0000 C CNN
+F 2 "" H 9400 5300 50  0001 C CNN
+F 3 "" H 9400 5300 50  0001 C CNN
+	1    9400 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 5300 9400 5200
+Connection ~ 9400 5200
 $EndSCHEMATC
