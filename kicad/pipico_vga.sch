@@ -298,7 +298,7 @@ U 1 1 602A27FA
 P 9400 5000
 F 0 "TP6" V 9354 5188 50  0000 L CNN
 F 1 "TestPoint" V 9445 5188 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 9600 5000 50  0001 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 5000 50  0001 C CNN
 F 3 "~" H 9600 5000 50  0001 C CNN
 	1    9400 5000
 	0    1    1    0   
@@ -309,7 +309,7 @@ U 1 1 602A27F4
 P 9400 4800
 F 0 "TP5" V 9354 4988 50  0000 L CNN
 F 1 "TestPoint" V 9445 4988 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 9600 4800 50  0001 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 4800 50  0001 C CNN
 F 3 "~" H 9600 4800 50  0001 C CNN
 	1    9400 4800
 	0    1    1    0   
@@ -320,7 +320,7 @@ U 1 1 602A27EE
 P 9400 4600
 F 0 "TP4" V 9354 4788 50  0000 L CNN
 F 1 "TestPoint" V 9445 4788 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 9600 4600 50  0001 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 4600 50  0001 C CNN
 F 3 "~" H 9600 4600 50  0001 C CNN
 	1    9400 4600
 	0    1    1    0   
@@ -331,7 +331,7 @@ U 1 1 6027BD8F
 P 9400 4300
 F 0 "TP3" V 9354 4488 50  0000 L CNN
 F 1 "TestPoint" V 9445 4488 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 9600 4300 50  0001 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 4300 50  0001 C CNN
 F 3 "~" H 9600 4300 50  0001 C CNN
 	1    9400 4300
 	0    1    1    0   
@@ -342,7 +342,7 @@ U 1 1 6027B902
 P 9400 4100
 F 0 "TP2" V 9354 4288 50  0000 L CNN
 F 1 "TestPoint" V 9445 4288 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 9600 4100 50  0001 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 4100 50  0001 C CNN
 F 3 "~" H 9600 4100 50  0001 C CNN
 	1    9400 4100
 	0    1    1    0   
@@ -353,7 +353,7 @@ U 1 1 6027B3D3
 P 9400 3900
 F 0 "TP1" V 9354 4088 50  0000 L CNN
 F 1 "TestPoint" V 9445 4088 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 9600 3900 50  0001 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 9600 3900 50  0001 C CNN
 F 3 "~" H 9600 3900 50  0001 C CNN
 	1    9400 3900
 	0    1    1    0   
