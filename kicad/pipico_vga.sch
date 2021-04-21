@@ -44,7 +44,7 @@ U 1 1 602B7049
 P 5300 1600
 F 0 "C1" H 5415 1646 50  0000 L CNN
 F 1 "100n" H 5415 1555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5338 1450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5338 1450 50  0001 C CNN
 F 3 "~" H 5300 1600 50  0001 C CNN
 	1    5300 1600
 	1    0    0    -1  
@@ -55,7 +55,7 @@ U 1 1 602B84F6
 P 5700 1600
 F 0 "C2" H 5815 1646 50  0000 L CNN
 F 1 "100n" H 5815 1555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5738 1450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5738 1450 50  0001 C CNN
 F 3 "~" H 5700 1600 50  0001 C CNN
 	1    5700 1600
 	1    0    0    -1  
@@ -66,7 +66,7 @@ U 1 1 602BC665
 P 6100 1600
 F 0 "C3" H 6215 1646 50  0000 L CNN
 F 1 "100n" H 6215 1555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6138 1450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6138 1450 50  0001 C CNN
 F 3 "~" H 6100 1600 50  0001 C CNN
 	1    6100 1600
 	1    0    0    -1  
@@ -77,7 +77,7 @@ U 1 1 602C07DA
 P 6500 1600
 F 0 "C4" H 6615 1646 50  0000 L CNN
 F 1 "100n" H 6615 1555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6538 1450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6538 1450 50  0001 C CNN
 F 3 "~" H 6500 1600 50  0001 C CNN
 	1    6500 1600
 	1    0    0    -1  
@@ -169,7 +169,7 @@ g3
 Text Label 5700 2400 0    50   ~ 0
 g4
 $Comp
-L MCU_RaspberryPi_and_Boards:Pico U1
+L pipico_vga-rescue:Pico-MCU_RaspberryPi_and_Boards U1
 U 1 1 6020A685
 P 2300 3400
 F 0 "U1" H 2300 4615 50  0000 C CNN
@@ -1098,12 +1098,12 @@ Connection ~ 4500 4250
 Text Label 5700 3400 0    50   ~ 0
 b0
 $Comp
-L random_things:74LVC162244ADGVJ U2
+L pipico_vga-rescue:74LVC162244ADGVJ-random_things U2
 U 1 1 60279B05
 P 5100 3450
 F 0 "U2" H 5100 5031 50  0000 C CNN
 F 1 "74LVC162244ADGVJ" H 5100 4940 50  0000 C CNN
-F 2 "Package_SO:TSSOP-48_6.1x12.5mm_P0.5mm" H 5500 4350 50  0001 C CNN
+F 2 "good_things:SOIC-48" H 5500 4350 50  0001 C CNN
 F 3 "" H 5500 4350 50  0001 C CNN
 	1    5100 3450
 	1    0    0    -1  
