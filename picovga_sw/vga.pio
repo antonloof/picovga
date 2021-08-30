@@ -1,0 +1,17 @@
+.program vga
+
+; pulls 16 bit words from fifo and does vga things
+; if first (msb or lsb idunno) bit is 0 then its rgb data which is outputed to screen
+; else its a delay, and we wait ;) and prob set some 
+
+main:
+    out X, 1
+    jmp !X rgb_out
+    ; here be delay
+    out X, 15
+delay_loop:
+    jmp X-- delay_loop [31]
+    jmp main
+rgb_out:
+    out pins, 15
+
