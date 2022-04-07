@@ -19,8 +19,8 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(picovga_sw picovga_sw.c vga.c)
-pico_generate_pio_header(picovga_sw ${CMAKE_CURRENT_LIST_DIR}/vga.pio)
+add_executable(picovga_sw picovga_sw.c vga3.c)
+pico_generate_pio_header(picovga_sw ${CMAKE_CURRENT_LIST_DIR}/vga3.pio)
 
 pico_set_program_name(picovga_sw "picovga_sw")
 pico_set_program_version(picovga_sw "0.1")

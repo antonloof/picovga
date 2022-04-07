@@ -1,0 +1,29 @@
+.program vga3_pixel
+; for pixel data 16bit words first bit ctrl if 1 then its a delay
+    SET Y, 0
+.wrap_target
+    OUT X, 1
+    JMP !X no_delay
+    OUT X, 15
+    SET PINS 0
+delay:
+    MOV PINS Y [13]
+    JMP X-- delay [15]
+no_delay:
+    OUT PINS, 12
+    OUT NULL, 3 ; have to get rid of 3 bits cus HW is not prepared for this ...
+
+.program vga3_sync
+.side_set 1
+; for vsync and hsync
+; pull delays, high delay
+    OUT ISR, 32 side 0
+    OUT Y, 32 side 0
+.wrap_target
+    MOV X ISR side 0
+count_low:
+    JMP X-- count_low side 0
+    MOV X Y side 0
+count_high:
+    JMP X-- count_low side 1
+
