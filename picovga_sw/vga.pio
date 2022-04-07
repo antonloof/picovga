@@ -2,16 +2,20 @@
 
 ; pulls 16 bit words from fifo and does vga things
 ; if first (msb or lsb idunno) bit is 0 then its rgb data which is outputed to screen
-; else its a delay, and we wait ;) and prob set some flags or smthing
-
+; else its a delay, and we wait ;) and prob set some disable stuffs
+; we want one pixel to be 4 cycles tho to maximize the performance of the mcu
+; time for one pixel is 3 cycles
+; time for delay is 6+5+1+6*n where n is 12 last bits of word
+; this means that delay is 4 + 2n pixels
 main:
     out X, 1
     jmp !X rgb_out
     ; here be delay
-    out X, 15
+    out PINS, 3; output hsync, vsync, buffer_enable signals
+    out X, 12  ; rest is delay
 delay_loop:
-    jmp X-- delay_loop [31]
-    jmp main
+    jmp X-- delay_loop [5]
+    jmp main [1]
 rgb_out:
-    out pins, 15
+    out PINS, 15
 

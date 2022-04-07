@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # initalize pico_sdk from installed location
 # (note this can come from environment, CMake cache etc)
-set(PICO_SDK_PATH "C:/Users/Anton/Documents/Pico/pico-sdk")
+set(PICO_SDK_PATH "C:/Users/Anton/Pico/pico-sdk")
 
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
@@ -19,7 +19,8 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(picovga_sw picovga_sw.c )
+add_executable(picovga_sw picovga_sw.c vga.c)
+pico_generate_pio_header(picovga_sw ${CMAKE_CURRENT_LIST_DIR}/vga.pio)
 
 pico_set_program_name(picovga_sw "picovga_sw")
 pico_set_program_version(picovga_sw "0.1")
@@ -28,7 +29,7 @@ pico_enable_stdio_uart(picovga_sw 0)
 pico_enable_stdio_usb(picovga_sw 1)
 
 # Add the standard library to the build
-target_link_libraries(picovga_sw pico_stdlib)
+target_link_libraries(picovga_sw pico_stdlib hardware_pio hardware_pll hardware_clocks hardware_dma hardware_irq)
 
 # Add any user requested libraries
 target_link_libraries(picovga_sw

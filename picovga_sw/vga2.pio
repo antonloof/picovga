@@ -1,0 +1,30 @@
+; set for oe
+; side set for hsync, vsync
+
+.program vga2_data
+.side_set 2
+
+.wrap_target
+    out X, 16
+line_loop:
+    out Y, 16
+front_wait:
+    jmp Y-- front_wait
+    out Y, 16
+sync_wait:
+    jmp Y-- sync_wait
+    out Y, 16
+data_out:
+    out PINS, 16
+no_data_out:
+    jmp Y-- data_out
+    out Y, 16
+back_wait:
+    jmp Y-- back_wait
+    jmp X-- line_loop
+
+
+    
+
+
+
