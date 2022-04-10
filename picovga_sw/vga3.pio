@@ -17,6 +17,8 @@ no_delay:
 .side_set 1
 ; for vsync and hsync
 ; pull delays, high delay
+; low takes delay+3 cycles
+; high takes delay cycles
     OUT ISR, 32 side 0
     OUT Y, 32 side 0
 .wrap_target
@@ -25,5 +27,5 @@ count_low:
     JMP X-- count_low side 0
     MOV X Y side 0
 count_high:
-    JMP X-- count_low side 1
+    JMP X-- count_high side 1
 

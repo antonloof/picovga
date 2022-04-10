@@ -29,8 +29,9 @@ typedef union vga3_pixel
 
 typedef struct sync_conf
 {
-    uint vsync_visible_px, vsync_front_px, vsync_pulse_px, vsync_back_px;
-    uint hsync_visible_lines, hsync_front_lines, hsync_pulse_lines, hsync_back_lines;
+    uint hsync_visible_px, hsync_front_px, hsync_pulse_px, hsync_back_px;
+    uint vsync_visible_lines, vsync_front_lines, vsync_pulse_lines, vsync_back_lines;
+    uint divider;
 } sync_conf;
 
 typedef struct vga3_conf
@@ -45,6 +46,7 @@ typedef struct vga3_conf
     uint sm_pixel, sm_hsync, sm_vsync;
     uint offset_pixel, offset_hsync, offset_vsync;
     pio_sm_config conf_pixel, conf_hsync, conf_vsync;
+    uint dma_c;
 } vga3_conf;
 
 void init_vga3(vga3_conf *conf);
