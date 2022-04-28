@@ -19,9 +19,12 @@ void init_vga3(vga3_conf *conf)
     uint total_hor_px = sc->hsync_pulse_px + sc->hsync_back_px + sc->hsync_front_px + sc->hsync_visible_px;
     uint total_ver_lines = sc->vsync_back_lines + sc->vsync_front_lines + sc->vsync_pulse_lines + sc->vsync_visible_lines;
 
-    pio_sm_put_blocking(conf->pio, conf->sm_hsync, sc->hsync_pulse_px - 3);                                   // low period
-    pio_sm_put_blocking(conf->pio, conf->sm_hsync, total_hor_px - sc->hsync_pulse_px);                        // high period
-    pio_sm_put_blocking(conf->pio, conf->sm_vsync, sc->vsync_pulse_lines * total_hor_px - 3);                 // low period
+    pio_sm_put_blocking(conf->pio, conf->sm_hsync, sc->hsync_back_px);                 // hsync phase
+    pio_sm_put_blocking(conf->pio, conf->sm_hsync, sc->hsync_pulse_px - 3 - 1);        // low period
+    pio_sm_put_blocking(conf->pio, conf->sm_hsync, total_hor_px - sc->hsync_pulse_px); // high period
+
+    pio_sm_put_blocking(conf->pio, conf->sm_vsync, 0);                                                        // vsync phase
+    pio_sm_put_blocking(conf->pio, conf->sm_vsync, sc->vsync_pulse_lines * total_hor_px - 3 - 1);             // low period
     pio_sm_put_blocking(conf->pio, conf->sm_vsync, (total_ver_lines - sc->vsync_pulse_lines) * total_hor_px); // high period
 
     // fill screen buffers
@@ -119,5 +122,5 @@ void _init_pixel_dma(vga3_conf *conf, uint buf_size)
 
 void _vga3_pixel_dma_handler(void)
 {
-    dma_hw->ints0 = 1 << dma_c;
+    // dma_hw->ints0 = 1 << dma_c;
 }

@@ -16,9 +16,13 @@ no_delay:
 .program vga3_sync
 .side_set 1
 ; for vsync and hsync
-; pull delays, high delay
+; pull phase
+; pull delays, low, high delay
 ; low takes delay+3 cycles
 ; high takes delay cycles
+    OUT X, 32 side 0
+phase_delay:
+    JMP X-- phase_delay side 0
     OUT ISR, 32 side 0
     OUT Y, 32 side 0
 .wrap_target
