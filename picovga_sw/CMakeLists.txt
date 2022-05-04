@@ -29,12 +29,15 @@ pico_enable_stdio_uart(picovga_sw 0)
 pico_enable_stdio_usb(picovga_sw 1)
 
 # Add the standard library to the build
-target_link_libraries(picovga_sw pico_stdlib hardware_pio hardware_pll hardware_clocks hardware_dma hardware_irq)
-
-# Add any user requested libraries
-target_link_libraries(picovga_sw
+target_link_libraries(picovga_sw 
+        pico_stdlib 
         hardware_pio
-        )
+        hardware_pll
+        hardware_clocks
+        hardware_dma
+        hardware_irq
+        hardware_gpio
+)
 
 pico_add_extra_outputs(picovga_sw)
 

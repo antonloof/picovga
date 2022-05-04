@@ -3089,6 +3089,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 1bdd5841-68b7-42e2-9447-cbdb608d8a08)
   )
+  (text "resistor values for dac with 75 ohm term\nsolve: 0.7/2^i=3.3*75/(75+x)\ni=1: 632.1\ni=2: 1339\ni=3: 2753\ni=4: 5582"
+    (at 111.76 40.005 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 34a23949-55cc-46d2-b5d7-1184ca12f567)
+  )
   (text "uses i2c1\n" (at 77.47 86.36 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8d469213-4a7e-4c3a-8a36-1e6a35bedfb1)

@@ -1,14 +1,16 @@
 .program vga3_pixel
 ; for pixel data 16bit words first bit ctrl if 1 then its a delay
+; delay is 6 + 2x + 2
     SET Y, 0
 .wrap_target
+start:
     OUT X, 1
     JMP !X no_delay
     OUT X, 15
-    SET PINS 0
+    MOV PINS Y
 delay:
-    MOV PINS Y [13]
-    JMP X-- delay [15]
+    JMP X-- delay [1]
+    JMP start
 no_delay:
     OUT PINS, 12
     OUT NULL, 3 ; have to get rid of 3 bits cus HW is not prepared for this ...
